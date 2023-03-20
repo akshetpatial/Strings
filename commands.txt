@@ -1,0 +1,263 @@
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders
+$ git init
+Initialized empty Git repository in E:/2023_project/StringBuilders/.git/
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git remote add origin https://github.com/akshetpatial/Strings.git
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git remote -v
+origin  https://github.com/akshetpatial/Strings.git (fetch)
+origin  https://github.com/akshetpatial/Strings.git (push)
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 599 bytes | 3.00 KiB/s, done.
+From https://github.com/akshetpatial/Strings
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/akshetpatial/Strings.git'
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/akshetpatial/Strings/pull/new/master
+remote:
+To https://github.com/akshetpatial/Strings.git
+ * [new branch]      master -> master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+        StringBuilders.iml
+        Strings.pdf
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git add Strings.pdf
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git commit -m "Added the String.pdf file"
+[master 269947f] Added the String.pdf file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Strings.pdf
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+        StringBuilders.iml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git add .
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .idea/.gitignore
+        new file:   .idea/misc.xml
+        new file:   .idea/modules.xml
+        new file:   StringBuilders.iml
+
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git commit -m "Created the directory String and initialize the git"
+[master e58bdd3] Created the directory String and initialize the git
+ 4 files changed, 28 insertions(+)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 StringBuilders.iml
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git log -4 --all --graph
+* commit e58bdd30f2ea48b3d8889bf237fc4324d2c3543c (HEAD -> master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Mon Mar 20 14:16:30 2023 +0530
+|
+|     Created the directory String and initialize the git
+|
+* commit 269947f5a958ef449dd248d08b6224f7079ed12a
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Mon Mar 20 14:15:13 2023 +0530
+|
+|     Added the String.pdf file
+|
+* commit d558906ab2aeb4d960ba2c46d2442bc3fb78c7a1 (origin/master, origin/main)
+  Author: AKSHET PATIAL <44276149+akshetpatial@users.noreply.github.com>
+  Date:   Mon Mar 20 14:09:00 2023 +0530
+
+      Initial commit
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 1.10 MiB | 1.84 MiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/akshetpatial/Strings.git
+   d558906..e58bdd3  master -> master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status'
+> git status
+> ^C
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .idea/uiDesigner.xml
+        new file:   .idea/vcs.xml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        out/
+        src/
+
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .idea/uiDesigner.xml
+        new file:   .idea/vcs.xml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        out/
+        src/
+
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git add .
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .idea/uiDesigner.xml
+        new file:   .idea/vcs.xml
+        new file:   out/production/StringBuilders/StringClass.class
+        new file:   src/StringClass.java
+
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git commit -m "Created the StringClassFile.java and made some minor changes"
+[master 9b09e14] Created the StringClassFile.java and made some minor changes
+ 4 files changed, 144 insertions(+)
+ create mode 100644 .idea/uiDesigner.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 out/production/StringBuilders/StringClass.class
+ create mode 100644 src/StringClass.java
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git log -4 --all --graph
+* commit 9b09e1443649630572613a448a49526194304ed4 (HEAD -> master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Tue Mar 21 00:41:08 2023 +0530
+|
+|     Created the StringClassFile.java and made some minor changes
+|
+* commit e58bdd30f2ea48b3d8889bf237fc4324d2c3543c (origin/master)
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Mon Mar 20 14:16:30 2023 +0530
+|
+|     Created the directory String and initialize the git
+|
+* commit 269947f5a958ef449dd248d08b6224f7079ed12a
+| Author: AKSHET PATIAL <akshet.patial@gmail.com>
+| Date:   Mon Mar 20 14:15:13 2023 +0530
+|
+|     Added the String.pdf file
+|
+* commit d558906ab2aeb4d960ba2c46d2442bc3fb78c7a1 (origin/main)
+  Author: AKSHET PATIAL <44276149+akshetpatial@users.noreply.github.com>
+  Date:   Mon Mar 20 14:09:00 2023 +0530
+
+      Initial commit
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git push origin master
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (11/11), 2.77 KiB | 473.00 KiB/s, done.
+Total 11 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/akshetpatial/Strings.git
+   e58bdd3..9b09e14  master -> master
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ touch commands.txt
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commands.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git add .
+
+Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
+$ git commit -m "Created the commands.txt file"
+[master 1c4394d] Created the commands.txt file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 commands.txt
+
+
