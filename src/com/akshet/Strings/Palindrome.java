@@ -1,3 +1,5 @@
+package com.akshet.Strings;
+
 import java.util.Scanner;
 
 public class Palindrome {

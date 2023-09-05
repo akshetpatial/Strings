@@ -1,3 +1,5 @@
+package com.akshet.Strings;
+
 public class StringClass {
 
     // Here in both the methods the time complexity is O(N^2) because we are adding the new object every single time.

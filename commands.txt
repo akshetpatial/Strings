@@ -189,8 +189,8 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         new file:   .idea/uiDesigner.xml
         new file:   .idea/vcs.xml
-        new file:   out/production/StringBuilders/StringClass.class
-        new file:   src/StringClass.java
+        new file:   out/production/StringBuilders/com.akshet.Strings.StringClass.class
+        new file:   src/com.akshet.Strings.StringClass.java
 
 
 Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
@@ -199,8 +199,8 @@ $ git commit -m "Created the StringClassFile.java and made some minor changes"
  4 files changed, 144 insertions(+)
  create mode 100644 .idea/uiDesigner.xml
  create mode 100644 .idea/vcs.xml
- create mode 100644 out/production/StringBuilders/StringClass.class
- create mode 100644 src/StringClass.java
+ create mode 100644 out/production/StringBuilders/com.akshet.Strings.StringClass.class
+ create mode 100644 src/com.akshet.Strings.StringClass.java
 
 Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
 $ git log -4 --all --graph
@@ -266,8 +266,8 @@ On branch master
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-        modified:   out/production/StringBuilders/StringClass.class
-        modified:   src/StringClass.java
+        modified:   out/production/StringBuilders/com.akshet.Strings.StringClass.class
+        modified:   src/com.akshet.Strings.StringClass.java
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -277,13 +277,13 @@ Untracked files:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
-$ git add out/production/StringBuilders/StringClass.class src/StringClass.java
+$ git add out/production/StringBuilders/com.akshet.Strings.StringClass.class src/com.akshet.Strings.StringClass.java
 
 Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
 $ git commit -m "Added some commands for char and Strings"
 [master a8e75d6] Added some commands for char and Strings
  2 files changed, 57 insertions(+)
- rewrite out/production/StringBuilders/StringClass.class (87%)
+ rewrite out/production/StringBuilders/com.akshet.Strings.StringClass.class (87%)
 
 Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
 $ git status
@@ -304,24 +304,24 @@ On branch master
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         new file:   out/production/StringBuilders/palindrome.class
-        new file:   src/Palindrome.java
+        new file:   src/com.akshet.Strings.Palindrome.java
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
         modified:   out/production/StringBuilders/palindrome.class
-        modified:   src/Palindrome.java
+        modified:   src/com.akshet.Strings.Palindrome.java
 
 
 Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
 $ git add .
 
 Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
-$ git commit -m "Created the Palindrome.java file"
-[master 556d13e] Created the Palindrome.java file
+$ git commit -m "Created the com.akshet.Strings.Palindrome.java file"
+[master 556d13e] Created the com.akshet.Strings.Palindrome.java file
  2 files changed, 31 insertions(+)
  create mode 100644 out/production/StringBuilders/palindrome.class
- create mode 100644 src/Palindrome.java
+ create mode 100644 src/com.akshet.Strings.Palindrome.java
 
 Lenovo@AKSHETISHEREDESKTOP MINGW64 /e/2023_project/StringBuilders (master)
 $ git status
@@ -334,7 +334,7 @@ $ git log -4 --all --graph
 | Author: AKSHET PATIAL <akshet.patial@gmail.com>
 | Date:   Tue Mar 21 01:48:37 2023 +0530
 |
-|     Created the Palindrome.java file
+|     Created the com.akshet.Strings.Palindrome.java file
 |
 * commit a8e75d663c357698feb713e175ecab0e906ff49d
 | Author: AKSHET PATIAL <akshet.patial@gmail.com>
@@ -346,7 +346,7 @@ $ git log -4 --all --graph
 | Author: AKSHET PATIAL <akshet.patial@gmail.com>
 | Date:   Tue Mar 21 00:48:20 2023 +0530
 |
-|     added the commands related to git initialize and StringClass
+|     added the commands related to git initialize and com.akshet.Strings.StringClass
 |
 * commit 1c4394d5f996e55ce7eb640e366cab291e75189e
 | Author: AKSHET PATIAL <akshet.patial@gmail.com>
@@ -372,7 +372,7 @@ $ git log -4 --all --graph
 | Author: AKSHET PATIAL <akshet.patial@gmail.com>
 | Date:   Tue Mar 21 01:48:37 2023 +0530
 |
-|     Created the Palindrome.java file
+|     Created the com.akshet.Strings.Palindrome.java file
 |
 * commit a8e75d663c357698feb713e175ecab0e906ff49d
 | Author: AKSHET PATIAL <akshet.patial@gmail.com>
@@ -384,7 +384,7 @@ $ git log -4 --all --graph
 | Author: AKSHET PATIAL <akshet.patial@gmail.com>
 | Date:   Tue Mar 21 00:48:20 2023 +0530
 |
-|     added the commands related to git initialize and StringClass
+|     added the commands related to git initialize and com.akshet.Strings.StringClass
 |
 * commit 1c4394d5f996e55ce7eb640e366cab291e75189e
 | Author: AKSHET PATIAL <akshet.patial@gmail.com>
