@@ -64,11 +64,18 @@ public class ReverseWordsString {
 
     public static String reverseInBuiltString(String str){
 
-        
+        String[] ans = str.split(" ");
+        StringBuffer sb = new StringBuffer();
+        System.out.println(ans.length);
+        for(int index = ans.length-1; index>=0;index--){
+            if(!ans[index].isEmpty())
+                sb.append(ans[index]+" ");
+        }
+        return sb.toString();
     }
 
     public static void main(String[] args) {
-        System.out.println("Enter new String: ");
+        System.out.println("Enter new String: "); //    akshet is a   good   boy
         Scanner scan = new Scanner(System.in);
         String str = scan.nextLine();
         String ans = reverseString(str);
