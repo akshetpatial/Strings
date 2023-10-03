@@ -1,8 +1,6 @@
 package com.akshet.Strings;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class CountAnagram {
 
@@ -101,6 +99,29 @@ public class CountAnagram {
             if(j<str1.length())
                 rangeMap.put(str1.charAt(j),rangeMap.get(str1.charAt(j))+1);
         }
+
+        List<Map.Entry<Character,Integer>> list  = new ArrayList<>(targetMap.entrySet());
+        list.sort(Map.Entry.comparingByValue());
+
+        System.out.println("Sorted List");
+        for(Map.Entry<Character,Integer> m: list){
+            System.out.print("Key: "+m.getKey()+ " Value: "+m.getValue()+"\n");
+        }
+
+        String st = "";
+        int index = list.size()-1;
+
+        while(index>=0){
+            int len = list.get(index).getValue();
+            while(len!=0){
+                st+=list.get(index).getKey();
+                len--;
+            }
+            index--;
+        }
+
+        System.out.println("Sort Character by Frequency");
+        System.out.println(st);
         return count;
     }
 
