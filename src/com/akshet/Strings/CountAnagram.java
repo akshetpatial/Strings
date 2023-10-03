@@ -1,10 +1,12 @@
 package com.akshet.Strings;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class CountAnagram {
 
-    private static String[] printAllAnagram(String str) {
+    /* private static String[] printAllAnagram(String str) {
 
         int len = str.length();
         int factorial = fact(len);
@@ -31,18 +33,58 @@ public class CountAnagram {
             return len;
 
         return len * fact(len-1);
+    } */
+
+    /*
+        Initial Code
+    */
+    private static int countAnagram(String str1, String str2) {
+        int i = 0;
+        int count =0;
+
+        Map<Character,Integer> targetMap =  new HashMap<Character,Integer>();
+
+        findMapElement(str2,targetMap);
+
+        for(Map.Entry<Character,Integer> mp : targetMap.entrySet()){
+            System.out.print("Key: "+mp.getKey() + " Value: "+ mp.getValue()+"\n");
+        }System.out.println();
+
+        int j = str2.length()-1;
+
+            while(j!=str1.length()) {
+                Map<Character,Integer> rangeMap =  new HashMap<Character,Integer>();
+                findMapElement(str1.substring(i, j + 1), rangeMap);
+                System.out.println("Range Map having Range between: "+i+" and "+j);
+                for(Map.Entry<Character,Integer> mp : rangeMap.entrySet()){
+                    System.out.print("Key: "+mp.getKey() + " Value: "+ mp.getValue()+"\n");
+                }System.out.println();
+                if (rangeMap.equals(targetMap))
+                    count++;
+                j++;
+                i++;
+            }
+            return count;
+    }
+
+    private static void findMapElement(String str2, Map<Character, Integer> targetMap) {
+        for(char ch : str2.toCharArray()){
+            if(!targetMap.containsKey(ch))
+                targetMap.put(ch,1);
+            else
+                targetMap.put(ch,targetMap.get(ch)+1);
+        }
     }
 
     public static void main(String[] args) {
-        System.out.println("Enter new String: "); //    for akshet
+        System.out.println("Enter Main String: "); //    aabaabaa
         Scanner scan = new Scanner(System.in);
-        String str = scan.nextLine();
-        String[] ans = printAllAnagram(str);
-        System.out.println("All Anagram");
-        for(String st : ans ) {
-            System.out.print(st+", ");
-        }
-        System.out.println();
-    }
+        String str_1 = scan.nextLine();
 
+        System.out.println("Enter target String: "); //    aaba
+        String str_2 = scan.nextLine();
+
+        int ans = countAnagram(str_1,str_2);
+        System.out.println("Number of Anagram of the target String "+str_2+" from the given String "+str_1+" is: "+ ans);
+    }
 }
