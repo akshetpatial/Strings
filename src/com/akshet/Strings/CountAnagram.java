@@ -38,7 +38,7 @@ public class CountAnagram {
     /*
         Initial Code
     */
-    private static int countAnagram(String str1, String str2) {
+    /*private static int countAnagram(String str1, String str2) {
         int i = 0;
         int count =0;
 
@@ -65,6 +65,43 @@ public class CountAnagram {
                 i++;
             }
             return count;
+    }*/
+
+    /*
+    Optimize Code We are not iterating over the map again
+   */
+
+    private static int countAnagram(String str1, String str2) {
+        int i = 0;
+        int count =0;
+
+        Map<Character,Integer> targetMap =  new HashMap<Character,Integer>();
+
+        findMapElement(str2,targetMap);
+
+        for(Map.Entry<Character,Integer> mp : targetMap.entrySet()){
+            System.out.print("Key: "+mp.getKey() + " Value: "+ mp.getValue()+"\n");
+        }System.out.println();
+
+        int j = str2.length()-1;
+
+        Map<Character,Integer> rangeMap =  new HashMap<Character,Integer>();
+        findMapElement(str1.substring(0, j + 1), rangeMap);
+
+        while(j!=str1.length()) {
+            System.out.println("Range Map having Range between: "+i+" and "+j);
+            for(Map.Entry<Character,Integer> mp : rangeMap.entrySet()){
+                System.out.print("Key: "+mp.getKey() + " Value: "+ mp.getValue()+"\n");
+            }System.out.println();
+            if (rangeMap.equals(targetMap))
+                count++;
+            rangeMap.put(str1.charAt(i),rangeMap.get(str1.charAt(i))-1);
+            i++;
+            j++;
+            if(j<str1.length())
+                rangeMap.put(str1.charAt(j),rangeMap.get(str1.charAt(j))+1);
+        }
+        return count;
     }
 
     private static void findMapElement(String str2, Map<Character, Integer> targetMap) {
